@@ -1,3 +1,5 @@
 <h1 style="color:Violet;"><%= @artist.name %> Info</h1>
 <p style="color:SlateBlue;"><b>Average Length of Songs: </b><%= @artist.average_song_length %></p>
 <p style="color:SlateBlue;"><b>Count of Songs: </b><%= @artist.songs.count %></p>
+
+<%= link_to "Take Me Back", artists_path %>

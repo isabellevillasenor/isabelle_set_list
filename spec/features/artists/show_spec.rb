@@ -16,5 +16,14 @@ RSpec.describe 'As A Visitor' do
       expect(page).to have_content(@ys.average_song_length)
       expect(page).to have_content(@ys.songs.count)
     end
+
+    it 'Should have a link to take you back to artists index' do
+      visit "/artists/#{@ys.id}"
+
+      expect(page).to have_link("Take Me Back")
+      click_link
+
+      expect(current_path).to eq("/artists")
+    end
   end
 end
