@@ -1,0 +1,9 @@
+<h1 style="color:SlateBlue;">Enter Artist Info</h1>
+
+<%= form_with model: @artist, url: artists_path, method: :post, class: 'artists_form', local: true do |f| %>
+
+  <%= f.label :name, 'Name:' %><br>
+  <%= f.text_field :name %><br/>
+
+  <%= f.submit 'Create Artist' %>
+<% end %>
