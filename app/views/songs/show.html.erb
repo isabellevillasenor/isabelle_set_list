@@ -1,5 +1,6 @@
 <h1 style="color:SlateBlue;"><%= @song.title %> Song Info</h1>
+<h3 style="color:Violet;">By: <%= @song.artist.name %></h3>
 <p style="color:MediumSeaGreen;"><b>Length: </b><%= @song.length %></p>
 <p style="color:MediumSeaGreen;"><b>Play Count: </b><%= @song.play_count %></p><br/>
 
-<%= link_to "Take Me Back", songs_path %>
+<%= link_to "Take Me Back", songs_path, style: "color: #F4ADC6;" %>
