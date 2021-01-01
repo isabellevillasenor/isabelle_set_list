@@ -15,6 +15,11 @@ class ArtistsController < ApplicationController
     redirect_to artists_path
   end
 
+  def destroy
+    Artist.destroy(params[:id])
+    redirect_to artists_path
+  end
+
   private
   def artist_params
     params.permit(:name)

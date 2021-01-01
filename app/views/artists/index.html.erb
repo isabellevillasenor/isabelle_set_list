@@ -1,7 +1,8 @@
 <h1 style="color:SlateBlue;">Isabelles Artists</h1>
 
-<% @artists.each do |artist| %>
-  <h2 style="color:Violet;"><%= artist.name %></h2>
+<% @artists.each do |a| %>
+  <h2 style="color:Violet;"><%= a.name %>
+  <%= button_to 'Delete', artist_path(a), method: :delete %></h2>
 <% end %>
 
 <%= link_to "Create New Artist", new_artist_path, style: "color: #F4ADC6;" %>
