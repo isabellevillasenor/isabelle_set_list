@@ -1,0 +1,9 @@
+<h1 style="color:SlateBlue;">Update <%= @artist.name %></h1>
+
+<%= form_with url: artist_path(@artist), method: :patch, local: true do |f| %>
+
+  <%= f.label :name, 'Name:' %><br>
+  <%= f.text_field :name %><br/>
+
+  <%= f.submit 'Update Artist' %>
+<% end %>
