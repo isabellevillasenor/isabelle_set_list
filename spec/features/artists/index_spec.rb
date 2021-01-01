@@ -13,5 +13,14 @@ RSpec.describe 'As A Visitor' do
       expect(page).to have_content("#{@sc.name}")
       expect(page).to have_content("#{@ys.name}")
     end
+
+    it 'has link to create a new artist' do
+      visit "/artists"
+
+      expect(page).to have_link("Create New Artist")
+      click_link
+
+      expect(current_path).to eq ("/artists/new")
+    end
   end
 end
