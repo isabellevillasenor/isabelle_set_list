@@ -2,7 +2,8 @@
 
 <% @artists.each do |a| %>
   <h2 style="color:Violet;"><%= a.name %>
-  <%= button_to 'Delete', artist_path(a), method: :delete %></h2>
+  <%= button_to 'Delete', artist_path(a), method: :delete %>
+  <%= button_to 'Edit', edit_artist_path(a), method: :get %></h2>
 <% end %>
 
 <%= link_to "Create New Artist", new_artist_path, style: "color: #F4ADC6;" %>
